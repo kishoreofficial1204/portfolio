@@ -290,7 +290,7 @@ export const ContactSection: React.FC = () => {
                 <motion.a
                   whileHover={{ scale: 1.04 }}
                   whileTap={{ scale: 0.96 }}
-                  href="https://linkedin.com"
+                  href={personalInfo.socials.linkedin}
                   target="_blank"
                   rel="noreferrer"
                   className="p-3 rounded-xl bg-slate-900 border border-slate-800 hover:border-blue-500/40 text-slate-300 hover:text-blue-400 text-xs font-medium flex items-center justify-center gap-1.5 transition-colors"
@@ -301,7 +301,7 @@ export const ContactSection: React.FC = () => {
                 <motion.a
                   whileHover={{ scale: 1.04 }}
                   whileTap={{ scale: 0.96 }}
-                  href="https://github.com"
+                  href={personalInfo.socials.github}
                   target="_blank"
                   rel="noreferrer"
                   className="p-3 rounded-xl bg-slate-900 border border-slate-800 hover:border-slate-600 text-slate-300 hover:text-white text-xs font-medium flex items-center justify-center gap-1.5 transition-colors"
@@ -312,7 +312,7 @@ export const ContactSection: React.FC = () => {
                 <motion.a
                   whileHover={{ scale: 1.04 }}
                   whileTap={{ scale: 0.96 }}
-                  href="https://leetcode.com"
+                  href={personalInfo.socials.leetcode}
                   target="_blank"
                   rel="noreferrer"
                   className="p-3 rounded-xl bg-slate-900 border border-slate-800 hover:border-amber-500/40 text-slate-300 hover:text-amber-400 text-xs font-medium flex items-center justify-center gap-1.5 transition-colors"

@@ -56,9 +56,21 @@ export const ExperienceSection: React.FC = () => {
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-6 border-b border-slate-800">
                 <div className="space-y-1">
                   <div className="flex items-center gap-3">
-                    <span className="text-2xl font-display font-bold text-slate-100 group-hover:text-emerald-400 transition-colors">
-                      {exp.company}
-                    </span>
+                    {exp.companyUrl ? (
+                      <a
+                        href={exp.companyUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-2xl font-display font-bold text-slate-100 hover:text-emerald-400 hover:underline transition-all flex items-center gap-1.5"
+                      >
+                        {exp.company}
+                        <ArrowUpRight className="w-5 h-5 text-emerald-400/80 shrink-0 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                      </a>
+                    ) : (
+                      <span className="text-2xl font-display font-bold text-slate-100 group-hover:text-emerald-400 transition-colors">
+                        {exp.company}
+                      </span>
+                    )}
                     <span className="px-2.5 py-0.5 rounded-full text-xs font-mono font-medium bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
                       Freelance
                     </span>

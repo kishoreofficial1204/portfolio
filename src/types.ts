@@ -12,6 +12,7 @@ export interface EducationItem {
 export interface WorkExperienceItem {
   id: string;
   company: string;
+  companyUrl?: string;
   role: string;
   period: string;
   location: string;

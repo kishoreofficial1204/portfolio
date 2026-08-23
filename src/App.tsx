@@ -7,7 +7,6 @@ import { ExperienceSection } from './components/ExperienceSection';
 import { ProjectsSection } from './components/ProjectsSection';
 import { HackathonsAndAchievements } from './components/HackathonsAndAchievements';
 import { EducationCertifications } from './components/EducationCertifications';
-import { InteractiveStreakWidget } from './components/InteractiveStreakWidget';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { InteractiveTerminal } from './components/InteractiveTerminal';
@@ -61,8 +60,6 @@ export default function App() {
         {/* 5. Featured Projects (CodeStreak, Gift App, AETHER, Hydes Nexus) */}
         <ProjectsSection />
 
-        {/* 6. Gamified CodeStreak Interactive Challenge */}
-        <InteractiveStreakWidget />
 
         {/* 7. Hackathons, Honors & Trophies */}
         <HackathonsAndAchievements />

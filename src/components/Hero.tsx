@@ -282,7 +282,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal, onOpenResume }) => {
               <span className="text-xs font-mono text-slate-400">Find me on:</span>
               <motion.a
                 whileHover={{ scale: 1.1, y: -2 }}
-                href="https://linkedin.com"
+                href={personalInfo.socials.linkedin}
                 target="_blank"
                 rel="noreferrer"
                 className="p-2 rounded-lg bg-slate-900/80 hover:bg-slate-800 border border-slate-800 text-slate-400 hover:text-blue-400 transition-all"
@@ -292,7 +292,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal, onOpenResume }) => {
               </motion.a>
               <motion.a
                 whileHover={{ scale: 1.1, y: -2 }}
-                href="https://github.com"
+                href={personalInfo.socials.github}
                 target="_blank"
                 rel="noreferrer"
                 className="p-2 rounded-lg bg-slate-900/80 hover:bg-slate-800 border border-slate-800 text-slate-400 hover:text-white transition-all"
@@ -302,7 +302,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenTerminal, onOpenResume }) => {
               </motion.a>
               <motion.a
                 whileHover={{ scale: 1.1, y: -2 }}
-                href="https://leetcode.com"
+                href={personalInfo.socials.leetcode}
                 target="_blank"
                 rel="noreferrer"
                 className="p-2 rounded-lg bg-slate-900/80 hover:bg-slate-800 border border-slate-800 text-slate-400 hover:text-amber-400 transition-all"

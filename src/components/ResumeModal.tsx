@@ -39,7 +39,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
   const handleCopyMarkdown = () => {
     const resumeMd = `# KISHORE A
 Email: ${personalInfo.email} | Phone: ${personalInfo.phone} | Location: ${personalInfo.location}
-LinkedIn | GitHub | LeetCode
+[LinkedIn](${personalInfo.socials.linkedin}) | [GitHub](${personalInfo.socials.github}) | [LeetCode](${personalInfo.socials.leetcode})
 
 ## EDUCATION
 - **Sri Krishna College of Technology**, Coimbatore, India
@@ -69,6 +69,8 @@ LinkedIn | GitHub | LeetCode
   Technologies: React.js, Tailwind CSS, Node.js, Express.js, MongoDB, Mongoose, JWT, Axios, Chart.js
 - **Gift Application | Gift Provider Application Management Platform**
   Technologies: React.js, Tailwind CSS, Node.js, Express.js, MongoDB, Mongoose, JWT, Axios, Chart.js
+- **Earth Material Operating System (EMOS) | AI-Powered Material Intelligence Platform**
+  Technologies: React.js, TypeScript, Vite, Tailwind CSS, Node.js, Express.js, Google Gemini API, RAG, JWT, bcrypt
 
 ## ACHIEVEMENTS
 - MSME Hackathon 2025: Top 50 teams, MSME Internal Hackathon at SKCT [Hydes Nexus]
@@ -144,11 +146,11 @@ LinkedIn | GitHub | LeetCode
               KISHORE A
             </h1>
             <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-xs text-slate-700">
-              <span className="font-semibold text-blue-700">LinkedIn</span>
+              <a href={personalInfo.socials.linkedin} target="_blank" rel="noreferrer" className="font-semibold text-blue-700 hover:underline">LinkedIn</a>
               <span>|</span>
-              <span className="font-semibold text-slate-900">GitHub</span>
+              <a href={personalInfo.socials.github} target="_blank" rel="noreferrer" className="font-semibold text-slate-900 hover:underline">GitHub</a>
               <span>|</span>
-              <span className="font-semibold text-amber-700">LeetCode</span>
+              <a href={personalInfo.socials.leetcode} target="_blank" rel="noreferrer" className="font-semibold text-amber-700 hover:underline">LeetCode</a>
               <span>|</span>
               <span className="font-mono">{personalInfo.email}</span>
               <span>|</span>
@@ -212,8 +214,11 @@ LinkedIn | GitHub | LeetCode
             </h2>
             <div>
               <div className="flex justify-between items-baseline font-semibold">
-                <span>Blastorz | Software Engineer (Freelance)</span>
-                <span className="text-xs text-slate-700">2024 – Present</span>
+                <span>
+                  <a href="https://www.blastorz.fun" target="_blank" rel="noreferrer" className="hover:text-emerald-700 hover:underline">Blastorz</a>
+                  {' '}| Software Engineer (Freelance)
+                </span>
+                <span className="text-xs text-slate-700">July 2026 – Present</span>
               </div>
               <ul className="list-disc list-outside ml-4 mt-1 space-y-1 text-slate-800 text-xs">
                 <li>Developed & enhanced web applications by implementing new features, fixing bugs, and improving existing application functionality.</li>
@@ -247,7 +252,7 @@ LinkedIn | GitHub | LeetCode
             <div className="space-y-3">
               <div>
                 <div className="flex justify-between items-baseline">
-                  <span className="font-bold">CodeStreak | Gamified Coding Practice & Progress Tracking Platform</span>
+                  <a href="https://github.com/kishoreofficial1204/codestreak" target="_blank" rel="noreferrer" className="font-bold hover:text-emerald-700 hover:underline">CodeStreak | Gamified Coding Practice & Progress Tracking Platform</a>
                   <span className="text-xs font-semibold text-blue-700">GitHub</span>
                 </div>
                 <p className="text-[11px] text-slate-600 italic">
@@ -262,7 +267,7 @@ LinkedIn | GitHub | LeetCode
 
               <div>
                 <div className="flex justify-between items-baseline">
-                  <span className="font-bold">Gift Application | Gift Provider Application Management Platform</span>
+                  <a href="https://github.com/kishoreofficial1204/Gift_Application" target="_blank" rel="noreferrer" className="font-bold hover:text-emerald-700 hover:underline">Gift Application | Gift Provider Application Management Platform</a>
                   <span className="text-xs font-semibold text-blue-700">GitHub</span>
                 </div>
                 <p className="text-[11px] text-slate-600 italic">
@@ -272,6 +277,20 @@ LinkedIn | GitHub | LeetCode
                   <li>Engineered a full-stack MERN-style platform for coding practice/gift workflows, enabling assignment discovery, solution submission, progress tracking, and personalized coding streaks.</li>
                   <li>Developed secure authentication and REST APIs using JWT, bcrypt, Express.js, and MongoDB/Mongoose with role-based access for users and administrators.</li>
                   <li>Integrated a gamification system featuring reward points, streak tracking, badges, leaderboards, wallet transactions, and dashboard analytics to encourage consistent coding practice.</li>
+                </ul>
+              </div>
+
+              <div>
+                <div className="flex justify-between items-baseline">
+                  <a href="https://github.com/kishoreofficial1204/Earth-Material-Operating-System" target="_blank" rel="noreferrer" className="font-bold hover:text-emerald-700 hover:underline">Earth Material Operating System (EMOS) | AI-Powered Material Intelligence Platform</a>
+                  <span className="text-xs font-semibold text-blue-700">GitHub</span>
+                </div>
+                <p className="text-[11px] text-slate-600 italic">
+                  Technologies: React.js, TypeScript, Vite, Tailwind CSS, Node.js, Express.js, Google Gemini API, RAG, JWT, bcrypt
+                </p>
+                <ul className="list-disc list-outside ml-4 mt-1 space-y-0.5 text-xs text-slate-800">
+                  <li>Built an AI-powered platform that analyzes product images, materials, and condition to recommend sustainable lifecycle pathways such as Repair, Reuse, Remanufacture, or Recycle.</li>
+                  <li>Developed a circular lifecycle decision engine using multi-criteria analysis (MCDA) and RAG-based knowledge retrieval to provide evidence-backed recommendations.</li>
                 </ul>
               </div>
             </div>

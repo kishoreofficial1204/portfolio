@@ -20,9 +20,9 @@ export const personalInfo: PersonalInfo = {
   cgpa: '8.21 / 10',
   status: 'Open to Software Engineering & AI Roles / Internships',
   socials: {
-    linkedin: 'https://linkedin.com',
-    github: 'https://github.com',
-    leetcode: 'https://leetcode.com',
+    linkedin: 'https://www.linkedin.com/in/kishore-a-483170325/',
+    github: 'https://github.com/kishoreofficial1204',
+    leetcode: 'https://leetcode.com/u/A_KISHORE/',
     email: 'mailto:727824tucs206@skct.edu.in',
     phone: 'tel:+919363733198',
   },
@@ -32,8 +32,9 @@ export const workExperience: WorkExperienceItem[] = [
   {
     id: 'blastorz-swe',
     company: 'Blastorz',
+    companyUrl: 'https://www.blastorz.fun',
     role: 'Software Engineer (Freelance)',
-    period: '2024 – Present',
+    period: 'July 2026 – Present',
     location: 'Remote / India',
     description:
       'Engineered and enhanced client-facing full-stack web applications, architecting responsive frontend interfaces and high-performance backend microservices.',
@@ -81,7 +82,7 @@ export const projects: ProjectItem[] = [
       'Axios',
       'Chart.js',
     ],
-    githubUrl: 'https://github.com',
+    githubUrl: 'https://github.com/kishoreofficial1204/codestreak',
     liveUrl: '#',
     metrics: [
       { label: 'Security', value: 'JWT + Bcrypt' },
@@ -146,7 +147,7 @@ export const updateDailyStreak = async (userId, submissionStatus) => {
       'Axios',
       'Chart.js',
     ],
-    githubUrl: 'https://github.com',
+    githubUrl: 'https://github.com/kishoreofficial1204/Gift_Application',
     liveUrl: '#',
     metrics: [
       { label: 'Role Access', value: 'Multi-Tenant RBAC' },
@@ -180,7 +181,7 @@ export const updateDailyStreak = async (userId, submissionStatus) => {
       'Tailwind CSS',
       'PostgreSQL',
     ],
-    githubUrl: 'https://github.com',
+    githubUrl: 'https://github.com/kishoreofficial1204',
     liveUrl: '#',
     metrics: [
       { label: 'Hackathon', value: 'Grand Finalist' },
@@ -211,13 +212,65 @@ export const updateDailyStreak = async (userId, submissionStatus) => {
       'Tailwind CSS',
       'Git',
     ],
-    githubUrl: 'https://github.com',
+    githubUrl: 'https://github.com/kishoreofficial1204',
     liveUrl: '#',
     metrics: [
       { label: 'SIH 2025', value: 'Top 20 Teams' },
       { label: 'MSME 2025', value: 'Top 50 Teams' },
       { label: 'Innovation', value: 'National Finalist' },
     ],
+  },
+  {
+    id: 'emos',
+    title: 'Earth Material Operating System (EMOS)',
+    subtitle: 'AI-Powered Material Intelligence Platform',
+    category: 'AI & ML',
+    featured: true,
+    description:
+      'An AI-powered circular material intelligence platform that analyzes product images, materials, and condition to recommend sustainable lifecycle pathways such as Repair, Reuse, Remanufacture, or Recycle.',
+    problemStatement:
+      'Determining the most ecological and cost-effective circular lifecycle pathway for end-of-use materials is historically complex. EMOS automates this decision matrix by integrating computer vision material inspections, multi-criteria decision analysis (MCDA), and RAG-based context parsing.',
+    keyFeatures: [
+      'Built an AI-powered platform that analyzes product images, materials, and condition to recommend sustainable lifecycle pathways such as Repair, Reuse, Remanufacture, or Recycle.',
+      'Developed a circular lifecycle decision engine using multi-criteria analysis (MCDA) and RAG-based knowledge retrieval to provide evidence-backed recommendations.',
+    ],
+    technologies: [
+      'React.js',
+      'TypeScript',
+      'Vite',
+      'Tailwind CSS',
+      'Node.js',
+      'Express.js',
+      'Google Gemini API',
+      'RAG',
+      'JWT',
+      'bcrypt',
+    ],
+    githubUrl: 'https://github.com/kishoreofficial1204/Earth-Material-Operating-System',
+    liveUrl: '#',
+    metrics: [
+      { label: 'Core AI', value: 'Gemini + RAG' },
+      { label: 'Analysis', value: 'MCDA Engine' },
+      { label: 'Architecture', value: 'React + Vite' },
+    ],
+    codeSnippet: {
+      filename: 'lifecycleEngine.ts',
+      language: 'typescript',
+      code: `// Multi-Criteria Decision Analysis (MCDA) & Circular Economics Engine
+export const evaluateLifecyclePathway = (material: string, conditionScore: number) => {
+  const pathways = ['REPAIR', 'REUSE', 'REMANUFACTURE', 'RECYCLE'];
+  
+  if (conditionScore >= 0.85) {
+    return { recommend: 'REUSE', confidence: 0.94, description: 'Direct resale or redistribution' };
+  } else if (conditionScore >= 0.60) {
+    return { recommend: 'REPAIR', confidence: 0.88, description: 'Minor structural restoration required' };
+  } else if (conditionScore >= 0.35) {
+    return { recommend: 'REMANUFACTURE', confidence: 0.82, description: 'Industrial disassemble & rebuild' };
+  } else {
+    return { recommend: 'RECYCLE', confidence: 0.98, description: 'Raw material reclaiming and smelting' };
+  }
+};`,
+    },
   },
 ];
 

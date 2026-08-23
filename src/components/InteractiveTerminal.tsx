@@ -157,7 +157,14 @@ export const InteractiveTerminal: React.FC<InteractiveTerminalProps> = ({
           <div className="space-y-2 text-xs text-slate-300">
             {workExperience.map((exp) => (
               <div key={exp.id} className="p-2 rounded bg-slate-900 border border-slate-800">
-                <p className="text-emerald-400 font-bold">{exp.company} — {exp.role}</p>
+                <p className="text-emerald-400 font-bold">
+                  {exp.companyUrl ? (
+                    <a href={exp.companyUrl} target="_blank" rel="noreferrer" className="hover:underline hover:text-emerald-300">{exp.company}</a>
+                  ) : (
+                    exp.company
+                  )}
+                  {' '}— {exp.role}
+                </p>
                 <p className="text-cyan-400 text-[11px]">{exp.period} | {exp.location}</p>
                 <p className="text-slate-400 mt-1">{exp.description}</p>
                 <ul className="list-disc list-inside mt-2 text-slate-300 space-y-1">
@@ -222,8 +229,9 @@ export const InteractiveTerminal: React.FC<InteractiveTerminalProps> = ({
             <p>📧 Email: <span className="text-emerald-400 font-mono">{personalInfo.email}</span></p>
             <p>📱 Phone: <span className="text-emerald-400 font-mono">{personalInfo.phone}</span></p>
             <p>📍 Location: <span className="text-slate-300">{personalInfo.location}</span></p>
-            <p>🔗 LinkedIn: <span className="text-blue-400">{personalInfo.socials.linkedin}</span></p>
-            <p>🐙 GitHub: <span className="text-slate-300">{personalInfo.socials.github}</span></p>
+            <p>🔗 LinkedIn: <a href={personalInfo.socials.linkedin} target="_blank" rel="noreferrer" className="text-blue-400 hover:underline">{personalInfo.socials.linkedin}</a></p>
+            <p>🐙 GitHub: <a href={personalInfo.socials.github} target="_blank" rel="noreferrer" className="text-slate-300 hover:underline">{personalInfo.socials.github}</a></p>
+            <p>💡 LeetCode: <a href={personalInfo.socials.leetcode} target="_blank" rel="noreferrer" className="text-amber-400 hover:underline">{personalInfo.socials.leetcode}</a></p>
           </div>
         );
         break;
@@ -257,10 +265,11 @@ export const InteractiveTerminal: React.FC<InteractiveTerminalProps> = ({
             <p>• Sri Vijay Vidyalaya MHSS (Class 12: 92.00% | 2023 - 2024)</p>
             <p>• Sri Vivekananda Matriculation School (Class 10: 88.60% | 2021 - 2022)</p>
             <p className="text-cyan-400 font-bold mt-2">=== WORK EXPERIENCE ===</p>
-            <p>• Blastorz — Software Engineer (Freelance)</p>
+            <p>• Blastorz — Software Engineer (Freelance) [Website: <a href="https://www.blastorz.fun" target="_blank" rel="noreferrer" className="text-emerald-400 hover:underline">https://www.blastorz.fun</a>]</p>
             <p className="text-cyan-400 font-bold mt-2">=== KEY PROJECTS ===</p>
             <p>• CodeStreak (Gamified Coding Practice & Streak System)</p>
             <p>• Gift Application (Management Platform with Role Access)</p>
+            <p>• Earth Material Operating System (EMOS) (AI-Powered Material Intelligence Platform)</p>
             <p>• AETHER (AI-Based Autonomous Hiring System - Dev Hackathon Grand Finalist)</p>
             <p className="text-cyan-400 font-bold mt-2">=== ACHIEVEMENTS ===</p>
             <p>• MSME Hackathon 2025: Top 50 Teams</p>
